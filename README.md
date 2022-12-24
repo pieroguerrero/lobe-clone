@@ -12,3 +12,4 @@
 - services: api call implementations. It could be to web services or to other type of interaction with the environment.
 - utilities: functions or logic that is used in several parts of the project.
 - layouts: Common layout section that are present across the across the pages, such as Navigation bar or footer. They form the general layout of the page.
+- configs: Configuration files for the App, testing, databses, BAAS, etc
