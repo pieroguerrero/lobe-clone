@@ -1,4 +1,5 @@
 {
+  "homepage": "http://localhost:5173/lobe/",
   "name": "lobe-clone",
   "private": true,
   "version": "0.0.0",
