@@ -2,9 +2,20 @@
 
 // eslint-disable-next-line no-undef
 module.exports = {
+  mode: "jit",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "color-primary": "#04ddb2",
+        "color-secondary": "#333",
+        "color-tertiary": "#767676",
+        "color-quaternary": "#fff",
+      },
+      fontFamily: {
+        "darker-grotesque": ["Darker Grotesque", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
