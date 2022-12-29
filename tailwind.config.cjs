@@ -17,5 +17,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: false,
+  },
+  // eslint-disable-next-line no-undef
+  plugins: [require("daisyui")],
 };

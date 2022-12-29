@@ -2,7 +2,9 @@ import { lazy, Suspense } from "react";
 const DesktopHeader = lazy(
   () => import("./components/DesktopHeader/DesktopHeader")
 );
-const MobileHeader = lazy(() => import("./components/MobileHeader"));
+const MobileHeader = lazy(
+  () => import("./components/MobileHeader/MobileHeader")
+);
 
 interface Props {
   /**

@@ -6,7 +6,7 @@ import logoSVG from "../../../../assets/images/logo.svg";
 export default function DesktopHeader() {
   return (
     <header className="px-10">
-      <div className="flex items-center justify-between h-20">
+      <div className="flex h-20 items-center justify-between">
         <Link to={""}>
           <img
             loading="lazy"
@@ -25,7 +25,9 @@ export default function DesktopHeader() {
           <MenuOption to={NavPaths.Blog.path} text={NavPaths.Blog.name} />
           <MenuOption to={NavPaths.Help.path} text={NavPaths.Help.name} />
         </nav>
-        <button className="h-12 w-[129px] rounded-3xl text-lg">Action</button>
+        <button className="h-12 w-[129px] rounded-3xl bg-[#eef0f2] text-[21px] font-bold text-color-secondary ">
+          Download
+        </button>
       </div>
     </header>
   );
