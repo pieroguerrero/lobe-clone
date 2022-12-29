@@ -17,8 +17,8 @@ export default function MobileHeader() {
   };
 
   return (
-    <header className="relative">
-      <div className="flex h-20 items-center justify-between px-8">
+    <header className="fixed top-0 z-30 w-full bg-color-quaternary opacity-90">
+      <div className="flex h-20 w-full items-center justify-between px-8">
         <Link to={""}>
           <img
             loading="lazy"

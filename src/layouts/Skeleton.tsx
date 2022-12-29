@@ -5,7 +5,7 @@ import Header from "./Header/Header";
 
 export default function Skeleton() {
   return (
-    <div className="flex flex-col h-full min-h-screen ">
+    <div className="relative flex h-full min-h-screen flex-col">
       <Header isMobile={!MediaQueries.minWidth640px.matches} />
       <Outlet />
       <Footer />

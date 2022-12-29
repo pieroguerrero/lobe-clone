@@ -5,7 +5,7 @@ import logoSVG from "../../../../assets/images/logo.svg";
 
 export default function DesktopHeader() {
   return (
-    <header className="px-10">
+    <header className=" fixed top-0 z-30 w-full bg-color-quaternary px-10 opacity-90">
       <div className="flex h-20 items-center justify-between">
         <Link to={""}>
           <img
