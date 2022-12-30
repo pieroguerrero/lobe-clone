@@ -10,8 +10,8 @@ export default function MenuOption({ to, text }: Props) {
       to={to}
       className={({ isActive }) =>
         isActive
-          ? "text-[21px] font-bold text-color-secondary hover:scale-105 hover:transform hover:duration-300"
-          : "text-[21px] font-bold text-color-tertiary hover:scale-105 hover:transform hover:text-color-secondary hover:duration-300"
+          ? "transform text-[22px] font-bold text-color-secondary duration-300 hover:scale-105 hover:transform hover:duration-300"
+          : "transform text-[22px] font-bold text-color-tertiary duration-300 hover:scale-105 hover:transform hover:text-color-secondary hover:duration-300"
       }
     >
       {text}

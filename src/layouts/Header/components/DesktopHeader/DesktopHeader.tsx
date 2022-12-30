@@ -25,7 +25,7 @@ export default function DesktopHeader() {
           <MenuOption to={NavPaths.Blog.path} text={NavPaths.Blog.name} />
           <MenuOption to={NavPaths.Help.path} text={NavPaths.Help.name} />
         </nav>
-        <button className="h-12 w-[129px] rounded-3xl bg-[#eef0f2] text-[21px] font-bold text-color-secondary ">
+        <button className="h-12 w-[129px] rounded-3xl bg-[#eef0f2] text-[22px] font-bold text-color-secondary ">
           Download
         </button>
       </div>
