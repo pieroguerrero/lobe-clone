@@ -5,7 +5,6 @@ import Overview from "../pages/overview/Overview";
 import NavPaths from "../utilities/NavPaths";
 const Tour = lazy(() => import("../pages/tour/Tour"));
 const Examples = lazy(() => import("../pages/examples/Examples"));
-//const Landing = lazy(() => import("../pages/landing/Landing"));
 
 function App() {
   return (
