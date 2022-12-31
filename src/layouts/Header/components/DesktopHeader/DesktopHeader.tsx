@@ -5,8 +5,8 @@ import logoSVG from "../../../../assets/images/logo.svg";
 
 export default function DesktopHeader() {
   return (
-    <header className=" fixed top-0 z-30 w-full bg-color-quaternary px-10 opacity-90">
-      <div className="mx-6 flex h-20 items-center justify-between xl:mx-16">
+    <header className=" fixed top-0 z-30 flex w-full justify-center bg-color-quaternary px-10 opacity-90">
+      <div className="mx-6 flex h-20 w-full items-center justify-between 2xl:mx-16">
         <Link to={""}>
           <img
             loading="lazy"
@@ -15,7 +15,7 @@ export default function DesktopHeader() {
             src={logoSVG}
           />
         </Link>
-        <nav className="flex justify-between gap-11">
+        <nav className="flex justify-center gap-11">
           <MenuOption to={""} text={NavPaths.Base.name} />
           <MenuOption
             to={NavPaths.Examples.path}

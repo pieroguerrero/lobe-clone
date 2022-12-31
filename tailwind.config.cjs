@@ -10,6 +10,8 @@ module.exports = {
         "color-primary": "#04ddb2",
         "color-secondary": "#333",
         "color-tertiary": "#767676",
+        "color-tertiary-soft": "#eef0f2",
+        "color-tertiary-bg": "#f2f3f5",
         "color-quaternary": "#fff",
       },
       fontFamily: {

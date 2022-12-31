@@ -9,3 +9,8 @@
     @apply font-darker-grotesque;
   }
 }
+
+/* html,
+body {
+  width: fit-content;
+} */

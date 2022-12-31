@@ -17,25 +17,25 @@ export default function MobileHeader() {
   };
 
   return (
-    <header className="fixed top-0 z-30 w-full bg-color-quaternary opacity-90">
-      <div className="flex h-20 w-full items-center justify-between px-8">
+    <header className="fixed top-0 z-30 w-full bg-color-quaternary bg-opacity-95">
+      <div className="flex h-20 w-full items-center justify-between px-12  sm:px-8">
         <Link to={""}>
           <img
             loading="lazy"
-            className="h-[22px] w-auto translate-x-[2px]"
+            className="h-[22px] w-auto "
             alt="Logo"
             src={logoSVG}
           />
         </Link>
-        <label className="swap-rotate swap h-10  w-10 rounded-full bg-[#eef0f2] p-0">
+        <label className="swap-rotate swap h-10  w-10 rounded-full bg-color-tertiary-soft p-0">
           <input type="checkbox" onChange={handleCheck} />
           <img className="swap-off h-6 w-auto" src={swapOff} alt="Off" />
           <img className="swap-on h-6 w-auto" src={swapOn} alt="On" />
         </label>
       </div>
       {showMenu ? (
-        <div className=" absolute flex h-96 w-full flex-col border-t-[1px] border-[#eef0f2] bg-white opacity-90">
-          <nav className="flex flex-col pt-3">
+        <div className=" absolute z-30 flex h-96 w-full flex-col border-t-[1px] border-color-tertiary-soft bg-color-quaternary bg-opacity-95 ">
+          <nav className="flex flex-col bg-color-quaternary bg-opacity-20 pt-3">
             <MenuOptionMobile to={""} text={NavPaths.Base.name} />
             <MenuOptionMobile
               to={NavPaths.Examples.path}
@@ -54,8 +54,8 @@ export default function MobileHeader() {
               text={NavPaths.Help.name}
             />
           </nav>
-          <div className="flex items-center justify-center px-[27px]">
-            <button className="mt-[37px] mb-[32px] h-[50px] w-full rounded-[50px] bg-color-primary text-2xl font-bold text-color-quaternary">
+          <div className="flex items-center justify-center bg-color-quaternary bg-opacity-50 px-[27px]">
+            <button className="mt-[37px] mb-[32px] h-[50px] w-full rounded-[50px] bg-color-primary bg-opacity-100 text-2xl font-bold text-color-quaternary ">
               Download
             </button>
           </div>
