@@ -18,7 +18,7 @@ export default function MobileHeader() {
 
   return (
     <header className="fixed top-0 z-30 w-full bg-color-quaternary bg-opacity-95">
-      <div className="flex h-20 w-full items-center justify-between px-12  sm:px-8">
+      <div className="flex h-20 w-full items-center justify-between px-8">
         <Link to={""}>
           <img
             loading="lazy"
@@ -27,7 +27,7 @@ export default function MobileHeader() {
             src={logoSVG}
           />
         </Link>
-        <label className="swap-rotate swap h-10  w-10 rounded-full bg-color-tertiary-soft p-0">
+        <label className="swap swap-rotate h-10  w-10 rounded-full bg-color-tertiary-soft p-0">
           <input type="checkbox" onChange={handleCheck} />
           <img className="swap-off h-6 w-auto" src={swapOff} alt="Off" />
           <img className="swap-on h-6 w-auto" src={swapOn} alt="On" />
