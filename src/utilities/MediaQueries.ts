@@ -5,7 +5,7 @@ const MediaQueries = (() => {
     window.location.reload();
   };
 
-  const minWidth1536px = window.matchMedia("min-width: 1536px");
+  const minWidth1536px = window.matchMedia("(min-width: 1536px)");
 
   minWidth1536px.onchange = () => {
     window.location.reload();

@@ -1,11 +1,13 @@
+import Highlights from "./components/Highlights";
 import Intro from "./components/Intro";
+import ProjectsInfo from "./components/ProjectsInfo";
 
 export default function Features() {
   return (
-    <section className="bg-color-tertiary-bg flex flex-col">
+    <section className="flex flex-col bg-color-tertiary-bg">
       <Intro />
-      <div>Charasteriscits</div>
-      <div>Projects</div>
+      <Highlights />
+      <ProjectsInfo />
     </section>
   );
 }

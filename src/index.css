@@ -10,7 +10,7 @@
   }
 }
 
-/* html,
+html,
 body {
-  width: fit-content;
-} */
+  overflow-x: hidden;
+}
