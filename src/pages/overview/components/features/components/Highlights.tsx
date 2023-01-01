@@ -5,7 +5,7 @@ import HighlightItem from "./HighlightItem";
 
 export default function Highlights() {
   return (
-    <div className="mx-8 mt-5 flex w-full flex-col gap-7  sm:mx-0 sm:-mt-10 sm:flex-row sm:gap-10 sm:px-[12%] 2xl:px-[21%]">
+    <div className="mx-8 mt-5 flex w-full flex-col gap-7  sm:mx-0 sm:-mt-10 sm:flex-row sm:justify-between sm:gap-0 sm:px-[12%] 2xl:px-[16%]">
       <HighlightItem
         src={imgEasy}
         alt={"Easy"}

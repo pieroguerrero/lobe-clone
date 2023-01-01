@@ -6,9 +6,9 @@ const HeroVideo = lazy(() => import("./components/HeroVideo"));
 export default function Hero() {
   const isMinWidth640px = MediaQueries.minWidth640px.matches;
   return (
-    <section className="relative flex min-h-screen  flex-col items-center justify-center sm:pt-20 ">
-      <div className=" flex w-full flex-col-reverse items-center justify-center sm:mx-16 sm:flex-row">
-        <div className=" z-20 mt-[-90px]  sm:static sm:ml-20 sm:mb-20  sm:w-[480px] 2xl:mb-[85px] 2xl:ml-0 2xl:w-[540px]">
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center sm:items-start sm:pt-20 ">
+      <div className=" flex w-full flex-col-reverse items-center justify-center sm:flex-row  sm:justify-between sm:px-[12%] 2xl:px-[16%] ">
+        <div className=" z-20 mt-[-90px] sm:static  sm:mt-0 sm:mb-20   2xl:mb-[85px]  ">
           <h1 className="  mb-4  flex flex-col items-center justify-center text-5xl sm:items-start sm:text-[78px] 2xl:text-[100px]">
             <div className=" h-fit font-black leading-[0.75] text-color-secondary antialiased">
               Train apps to
@@ -29,7 +29,7 @@ export default function Hero() {
               identify plants
             </div>
           </h1>
-          <div className="mx-8 mb-6 text-center text-[23px] font-medium leading-tight text-color-secondary antialiased sm:mx-0 sm:mb-10 sm:text-left sm:text-[32px] 2xl:text-[39px] ">
+          <div className="mx-8 mb-6 text-center text-[23px] font-medium leading-tight text-color-secondary antialiased sm:mx-0 sm:mb-10 sm:w-[480px] sm:text-left sm:text-[32px] 2xl:w-[540px] 2xl:text-[39px]">
             {isMinWidth640px
               ? "Lobe helps you train machine learning models with a free, easy to use tool."
               : "Create machine learning models with a free, easy to use tool."}
@@ -70,13 +70,13 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <div className=" min-w-[420px] max-w-[475px] sm:w-[600px] sm:min-w-0  sm:max-w-none 2xl:w-[680px]">
+        <div className="min-w-[420px] max-w-[475px] sm:w-[600px] sm:min-w-0 sm:max-w-none 2xl:w-[680px]">
           <Suspense fallback={<FallBackVideo isMobile={!isMinWidth640px} />}>
             <HeroVideo />
           </Suspense>
         </div>
       </div>
-      <div className="absolute bottom-5 animate-bounce sm:bottom-6">
+      <div className="absolute bottom-5 flex w-full animate-bounce items-center justify-center sm:bottom-6">
         <svg width="58px" height="24px" viewBox="0 0 58 24" version="1.1">
           <title>See More</title>
           <g

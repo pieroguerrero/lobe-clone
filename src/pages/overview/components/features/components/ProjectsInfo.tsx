@@ -8,7 +8,7 @@ import ProjectInfoCard from "./ProjectInfoCard";
 
 export default function ProjectsInfo() {
   return (
-    <div className="flex- flex-col sm:px-[12%] 2xl:px-[21%]">
+    <div className="flex- flex-col sm:mb-32 sm:px-[12%] 2xl:px-[16%]">
       <div className="mx-8 mt-16 sm:mx-0 sm:mt-0">
         <h3 className=" text-4xl font-extrabold antialiased sm:mt-[7%] sm:text-[53px] 2xl:mt-[9%] 2xl:text-[64px]">
           <span className=" text-color-primary">Project</span>{" "}
@@ -20,7 +20,7 @@ export default function ProjectsInfo() {
           templates coming soon.
         </p>
       </div>
-      <div className="flex gap-7">
+      <div className="flex sm:mt-16 sm:justify-between">
         <ProjectInfoCard
           src={vidClassification}
           srcFallback={imgClassification}
