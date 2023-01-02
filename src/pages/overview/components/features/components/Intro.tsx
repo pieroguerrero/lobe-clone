@@ -6,7 +6,7 @@ import MediaQueries from "../../../../../utilities/MediaQueries";
 export default function Intro() {
   return (
     <div className="flex flex-col items-center">
-      <div className="mt-12 flex w-full flex-col px-7 sm:px-[12%]  2xl:px-[16%]">
+      <div className="mt-12 flex w-full flex-col px-7 sm:mt-24 sm:px-[12%]  2xl:px-[16%]">
         <h2 className=" text-[46px] font-extrabold leading-[0.8] text-color-secondary antialiased sm:w-full sm:text-[78px] 2xl:text-[100px]">
           Machine learning
           <br />
