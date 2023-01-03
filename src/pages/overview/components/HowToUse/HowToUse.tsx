@@ -1,11 +1,11 @@
-import imgLabel from "../../../../assets/images/howto/Label.jpg";
-import imgTrain from "../../../../assets/images/howto/Train.jpg";
-import imgUse from "../../../../assets/images/howto/Use.jpg";
 import imgLabelMobile from "../../../../assets/images/howto/Label-mobile.jpg";
+import imgLabel from "../../../../assets/images/howto/Label.jpg";
 import imgTrainMobile from "../../../../assets/images/howto/Train-mobile.jpg";
+import imgTrain from "../../../../assets/images/howto/Train.jpg";
 import imgUseMobile from "../../../../assets/images/howto/Use-mobile.jpg";
-import Step from "./components/Step";
+import imgUse from "../../../../assets/images/howto/Use.jpg";
 import MediaQueries from "../../../../utilities/MediaQueries";
+import Step from "./components/Step";
 
 export default function HowToUse() {
   const isMinWidth640px = MediaQueries.minWidth640px.matches;

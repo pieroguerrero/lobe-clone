@@ -14,3 +14,7 @@ html,
 body {
   overflow-x: hidden;
 }
+
+.textleginility {
+  text-rendering: optimizeLegibility;
+}

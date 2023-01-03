@@ -1,8 +1,10 @@
 import { lazy, Suspense } from "react";
-//import Features from "./components/features/Features";
-const Features = lazy(() => import("./components/features/Features"));
 import Hero from "./components/hero/Hero";
-import HowToUse from "./components/HowToUse/HowToUse";
+const Features = lazy(() => import("./components/features/Features"));
+const HowToUse = lazy(() => import("./components/howToUse/HowToUse"));
+const Testimonials = lazy(
+  () => import("./components/testimonials/Testimonials")
+);
 
 export default function Overview() {
   return (
@@ -10,9 +12,9 @@ export default function Overview() {
       <Hero />
       <Suspense>
         <Features />
+        <HowToUse />
+        <Testimonials />
       </Suspense>
-      <HowToUse />
-      <section>Testimonials</section>
     </main>
   );
 }
