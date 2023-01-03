@@ -32,10 +32,16 @@ export default function Export() {
         <div className="mt-4 sm:mt-8">
           <Link
             to={NavPaths.Examples.path}
-            className=" absolute z-10 flex w-fit transform items-center gap-4 text-[32px] font-bold text-color-primary duration-300 hover:scale-105 hover:duration-300"
+            className=" absolute z-10 flex w-fit transform items-center gap-1 text-[21px] font-bold text-color-primary duration-300 hover:scale-105 hover:duration-300 sm:gap-4 sm:text-[32px]"
           >
             Learn More
-            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1">
+            <svg
+              width="32px"
+              height="32px"
+              className=" h-6 w-6 sm:h-8 sm:w-8"
+              viewBox="0 0 32 32"
+              version="1.1"
+            >
               <title>chevron</title>
               <g
                 id="Direction"
@@ -87,7 +93,7 @@ export default function Export() {
           </Link>
         </div>
       </div>
-      <div className="absolute sm:top-14 sm:left-[-10%] 2xl:top-20  2xl:left-[6%]">
+      <div className="absolute  -top-32  -left-64 sm:top-14 sm:left-[-10%] 2xl:top-20  2xl:left-[6%]">
         <div className="2XL:scale-100 relative m-auto h-[600px] w-full max-w-[1600px] scale-[0.64] sm:h-[1000px] sm:w-[1600px] sm:min-w-[1600px] sm:scale-[0.85] 2xl:scale-100">
           <div
             className={
