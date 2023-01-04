@@ -14,6 +14,8 @@ import svgML from "../../../../../assets/images/testimonials/ml.svg";
 import svgUnity from "../../../../../assets/images/testimonials/unity.svg";
 import { Link } from "react-router-dom";
 import NavPaths from "../../../../../utilities/NavPaths";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 export default function Export() {
   const className = "absolute transition-all duration-75 ease-linear";
   const classNameFigure =
@@ -103,10 +105,10 @@ export default function Export() {
             <figure
               className={classNameFigure + "bubble bg-[rgb(250,_202,_12)]"}
             >
-              <img
+              <LazyLoadImage
                 src={svgMicrosoft}
                 alt="windows logo"
-                loading="lazy"
+                effect="blur"
                 width="90"
                 height="90"
                 className={classNameImg}
@@ -119,11 +121,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(255,153,0)]"}>
-              <img
+              <LazyLoadImage
                 src={svgAWS}
                 alt="aws logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -133,11 +136,12 @@ export default function Export() {
             className={className + "bubble-container left-[1200px] top-[210px]"}
           >
             <figure className={classNameFigure + "bubble bg-[rgb(36,35,35)]"}>
-              <img
+              <LazyLoadImage
                 src={svgApple}
                 alt="apple logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -149,11 +153,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(255,209,1)]"}>
-              <img
+              <LazyLoadImage
                 src={svgTFLite}
                 alt="tflite logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -165,11 +170,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(14,56,177)]"}>
-              <img
+              <LazyLoadImage
                 src={svgFramer}
                 alt="framer logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -181,11 +187,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(229,75,75)]"}>
-              <img
+              <LazyLoadImage
                 src={svgGoogle}
                 alt="google logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -197,11 +204,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(0,137,214)]"}>
-              <img
+              <LazyLoadImage
                 src={svgAzure}
                 alt="azure logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -211,11 +219,12 @@ export default function Export() {
             className={className + "bubble-container left-[1100px] top-[480px]"}
           >
             <figure className={classNameFigure + "bubble bg-[rgb(4,221,178)]"}>
-              <img
+              <LazyLoadImage
                 src={svgArduino}
                 alt="arduino logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -227,11 +236,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(134,75,255)]"}>
-              <img
+              <LazyLoadImage
                 src={svgONNX}
                 alt="onnx logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -243,11 +253,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(23,195,123)]"}>
-              <img
+              <LazyLoadImage
                 src={svgPython}
                 alt="python logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -259,11 +270,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(225,0,0)]"}>
-              <img
+              <LazyLoadImage
                 src={svgRaspberry}
                 alt="raspberry logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -275,11 +287,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(252,60,45)]"}>
-              <img
+              <LazyLoadImage
                 src={svgTF}
                 alt="tensorflow logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -291,11 +304,12 @@ export default function Export() {
             }
           >
             <figure className={classNameFigure + "bubble bg-[rgb(51,51,51)]"}>
-              <img
+              <LazyLoadImage
                 src={svgUnity}
                 alt="unity logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
@@ -309,11 +323,12 @@ export default function Export() {
             <figure
               className={classNameFigure + "bubble bg-[rgb(167,187,195)]"}
             >
-              <img
+              <LazyLoadImage
                 src={svgML}
                 alt="coreml logo"
                 loading="lazy"
                 width="90"
+                effect="blur"
                 height="90"
                 className={classNameImg}
               />
