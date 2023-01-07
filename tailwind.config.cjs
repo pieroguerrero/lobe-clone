@@ -18,17 +18,26 @@ module.exports = {
         "darker-grotesque": ["Darker Grotesque", "sans-serif"],
       },
       keyframes: {
-        fade: {
-          "0%, 100%": {
-            opacity: "1",
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "25%": {
+            opacity: "0.25",
           },
           "50%": {
-            opacity: "0",
+            opacity: "0.5",
+          },
+          "75%": {
+            opacity: "0.75",
+          },
+          "100%": {
+            opacity: "1",
           },
         },
       },
       animation: {
-        fade: "fade 1s ease-in-out 1",
+        "fade-in": "fade-in 0.8s ease-in 1",
       },
     },
   },

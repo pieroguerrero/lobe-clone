@@ -18,8 +18,6 @@ export default function HeroVideo({ changeText }: IHeroVideoProps) {
     "identify plants",
   ]);
 
-  console.log({ message: "loading Hero Video...", textsToChange });
-
   return (
     <ReactPlayer
       url={MediaQueries.minWidth640px.matches ? desktopVideo : mobileVideo}
@@ -33,14 +31,8 @@ export default function HeroVideo({ changeText }: IHeroVideoProps) {
         clipPath: "inset(1px 1px)",
       }}
       onProgress={(state) => {
-        //const index = Math.floor(state.playedSeconds / 5);
         const index = Math.round(Math.abs(-0.4 + state.playedSeconds / 5));
-
         changeText(textsToChange[index]);
-        return;
-      }}
-      onPause={() => {
-        return textsToChange[0];
       }}
     />
   );

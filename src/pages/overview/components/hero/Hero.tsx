@@ -1,11 +1,11 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useId, useState } from "react";
 import MediaQueries from "../../../../utilities/MediaQueries";
 import FallBackVideo from "./components/FallBackVideo";
 const HeroVideo = lazy(() => import("./components/HeroVideo"));
 
 export default function Hero() {
+  const [isMinWidth640px] = useState(MediaQueries.minWidth640px.matches);
   const [heroSecondaryText, setHeroSecondaryText] = useState("identify plants");
-  const isMinWidth640px = MediaQueries.minWidth640px.matches;
 
   const handleTextChange = (textToChange: string): void => {
     setHeroSecondaryText(textToChange);
@@ -20,7 +20,10 @@ export default function Hero() {
               Train apps to
             </div>
 
-            <div className="h-fit animate-fade font-black leading-none  text-color-primary  antialiased ">
+            <div
+              key={heroSecondaryText}
+              className="h-fit  animate-fade-in font-black leading-none  text-color-primary  antialiased "
+            >
               {heroSecondaryText}
             </div>
           </h1>

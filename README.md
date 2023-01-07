@@ -13,3 +13,10 @@
 - utilities: functions or logic that is used in several parts of the project.
 - layouts: Common layout section that are present across the across the pages, such as Navigation bar or footer. They form the general layout of the page.
 - configs: Configuration files for the App, testing, databses, BAAS, etc
+
+
+## Optimization Tehcniques used:
+- Lazy Loading for Images and Components with Lazy, Suspense and the react-lazy-load-image-component library.
+- Font import optimization with .... 
+- CDN ready for the files.. (I have to get the URL for the files in a function or component)
+- Intersection Observer for the video playback
