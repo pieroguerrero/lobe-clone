@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import CallToAction from "../../components/CallToAction";
 import Hero from "./components/hero/Hero";
 const Features = lazy(() => import("./components/features/Features"));
 const HowToUse = lazy(() => import("./components/howToUse/HowToUse"));
@@ -14,6 +15,7 @@ export default function Overview() {
         <Features />
         <HowToUse />
         <Testimonials />
+        <CallToAction />
       </Suspense>
     </main>
   );

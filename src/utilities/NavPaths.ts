@@ -6,6 +6,7 @@ const NavPaths = Object.freeze({
   Blog: { path: "blog", name: "Blog" },
   Help: { path: "help", name: "Help" },
   Register: { path: "register", name: "Register" },
+  Soon: { path: "coming-soon", name: "Coming Soon" },
 });
 
 export default NavPaths;

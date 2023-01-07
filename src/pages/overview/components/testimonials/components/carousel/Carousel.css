@@ -64,9 +64,4 @@
 .slide {
   height: var(--data-slide-height);
   width: var(--data-slide-width);
-  /* transition: transform 0.3s ease; */
 }
-
-/* .slide:hover {
-  transform: scale(1.05);
-} */

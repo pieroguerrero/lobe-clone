@@ -49,7 +49,7 @@ export default function ExamplesCorusel() {
     : 210;
 
   return (
-    <div className=" mt-20 w-full sm:mt-32 2xl:mt-44 ">
+    <div className=" mt-20 mb-16 w-full sm:mt-32 sm:mb-28 2xl:mt-44 2xl:mb-40 ">
       <div className="flex w-full flex-col px-7  sm:px-[12%] 2xl:px-[16%]">
         <h2 className=" text-[46px] font-extrabold leading-[0.8] text-color-secondary antialiased sm:w-full sm:text-[78px] 2xl:text-[100px]">
           Lobe <span className=" text-color-primary">Examples</span>
@@ -66,7 +66,7 @@ export default function ExamplesCorusel() {
             itemWidth={itemWidth}
             shadowsWidth={0}
             animationDirection="RL"
-            animationSpeed={70}
+            animationSpeed={140}
           >
             <VideoItem
               linkTo={NavPaths.Examples.path}
@@ -123,7 +123,7 @@ export default function ExamplesCorusel() {
             itemWidth={itemWidth}
             shadowsWidth={0}
             animationDirection="LR"
-            animationSpeed={70}
+            animationSpeed={140}
           >
             <VideoItem
               linkTo={NavPaths.Examples.path}
