@@ -17,6 +17,19 @@ module.exports = {
       fontFamily: {
         "darker-grotesque": ["Darker Grotesque", "sans-serif"],
       },
+      keyframes: {
+        fade: {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0",
+          },
+        },
+      },
+      animation: {
+        fade: "fade 1s ease-in-out 1",
+      },
     },
   },
   daisyui: {

@@ -1,10 +1,16 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import MediaQueries from "../../../../utilities/MediaQueries";
 import FallBackVideo from "./components/FallBackVideo";
 const HeroVideo = lazy(() => import("./components/HeroVideo"));
 
 export default function Hero() {
+  const [heroSecondaryText, setHeroSecondaryText] = useState("identify plants");
   const isMinWidth640px = MediaQueries.minWidth640px.matches;
+
+  const handleTextChange = (textToChange: string): void => {
+    setHeroSecondaryText(textToChange);
+  };
+
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-center sm:items-start sm:pt-20 ">
       <div className=" flex w-full flex-col-reverse items-center justify-center sm:flex-row  sm:justify-between sm:px-[12%] 2xl:px-[16%] ">
@@ -13,20 +19,9 @@ export default function Hero() {
             <div className=" h-fit font-black leading-[0.75] text-color-secondary antialiased">
               Train apps to
             </div>
-            <div className="h-fit font-black leading-none text-color-primary antialiased">
-              {/* <DynamicText
-              speedFactor={1}
-              durationPeriod={5000}
-              listOfText={[
-                "see gestures",
-                "count reps",
-                "feel emotions",
-                "sense colors",
-                "check safety",
-                "identify plants",
-              ]}
-            /> */}
-              identify plants
+
+            <div className="h-fit animate-fade font-black leading-none  text-color-primary  antialiased ">
+              {heroSecondaryText}
             </div>
           </h1>
           <div className="mx-8 mb-6 text-center text-[23px] font-medium leading-tight text-color-secondary antialiased sm:mx-0 sm:mb-10 sm:w-[480px] sm:text-left sm:text-[32px] 2xl:w-[540px] 2xl:text-[39px]">
@@ -72,7 +67,7 @@ export default function Hero() {
         </div>
         <div className="min-w-[420px] max-w-[475px] sm:w-[600px] sm:min-w-0 sm:max-w-none 2xl:w-[680px]">
           <Suspense fallback={<FallBackVideo isMobile={!isMinWidth640px} />}>
-            <HeroVideo />
+            <HeroVideo changeText={handleTextChange} />
           </Suspense>
         </div>
       </div>
