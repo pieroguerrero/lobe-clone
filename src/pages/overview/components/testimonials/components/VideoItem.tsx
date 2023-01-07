@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player/file";
 import { Link } from "react-router-dom";
 
-interface Props {
+interface IVideoItemsProps {
   linkTo: string;
   videoSrc: string;
   videoPoster: string;
@@ -12,27 +12,30 @@ export default function VideoItem({
   videoSrc,
   videoPoster,
   title,
-}: Props) {
+}: IVideoItemsProps) {
   return (
-    <div className="2xl:h-[420px] 2xl:w-[600px]">
+    <div className="flex items-center justify-center p-2  sm:p-7  2xl:p-5">
       <Link
         to={linkTo}
         data-content={title}
-        className="relative top-8 left-8 rounded-[32px] after:absolute after:content-[attr(data-content)]"
+        className="relative rounded-[32px] shadow-lg transition-transform duration-500 ease-in-out after:absolute  after:top-6 after:left-8 after:z-10 after:text-4xl after:font-extrabold after:text-white after:content-[attr(data-content)] hover:scale-105 hover:transform"
       >
         <ReactPlayer
           url={videoSrc}
-          config={{ attributes: { poster: videoPoster } }}
+          config={{
+            attributes: {
+              poster: videoPoster,
+              className: "rounded-[32px] z-20",
+            },
+          }}
           playing={true}
           width="100%"
           height="auto"
           loop={true}
           controls={false}
           muted={true}
-          style={{
-            clipPath: "inset(1px 1px)",
-          }}
         />
+        <div className=" absolute top-0 left-0 h-full w-full rounded-[32px] bg-black opacity-20"></div>
       </Link>
     </div>
   );
