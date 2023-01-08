@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import imageBees from "../../../../../assets/images/testimonials/lr/Bees.jpg";
 import imageFeelTheBurn from "../../../../../assets/images/testimonials/lr/Feel the Burn.jpg";
@@ -31,25 +32,29 @@ import videoMicroscope from "../../../../../assets/videos/testimonials/rl/Micros
 import videoSleeping from "../../../../../assets/videos/testimonials/rl/Sleeping.mp4";
 import videoTelescope from "../../../../../assets/videos/testimonials/rl/Telescope.mp4";
 import videoWildfire from "../../../../../assets/videos/testimonials/rl/Wildfire.mp4";
+import useOnScreen from "../../../../../hooks/useOnScreen";
 import MediaQueries from "../../../../../utilities/MediaQueries";
 import NavPaths from "../../../../../utilities/NavPaths";
 import Carousel from "./carousel/Carousel";
 import VideoItem from "./VideoItem";
 
 export default function ExamplesCorusel() {
-  const itemWidth = MediaQueries.minWidth1536px.matches
-    ? 600
-    : MediaQueries.minWidth640px.matches
-    ? 540
-    : 295;
-  const itemHeight = MediaQueries.minWidth1536px.matches
-    ? 420
-    : MediaQueries.minWidth640px.matches
-    ? 379
-    : 210;
+  const [minWidth1536px] = useState(MediaQueries.minWidth1536px.matches);
+  const [minWidth640px] = useState(MediaQueries.minWidth640px.matches);
+  const divCarouselRef: any = useRef<HTMLDivElement>();
+  const divCarouselOnScreen = useOnScreen<HTMLDivElement>(
+    divCarouselRef,
+    MediaQueries.minWidth640px.matches ? "-200px" : "20px"
+  );
+
+  const itemWidth = minWidth1536px ? 600 : minWidth640px ? 540 : 295;
+  const itemHeight = minWidth1536px ? 420 : minWidth640px ? 379 : 210;
 
   return (
-    <div className=" mt-20 mb-16 w-full sm:mt-32 sm:mb-28 2xl:mt-44 2xl:mb-40 ">
+    <div
+      ref={divCarouselRef}
+      className=" mt-20 mb-16 w-full sm:mt-32 sm:mb-28 2xl:mt-44 2xl:mb-40 "
+    >
       <div className="flex w-full flex-col px-7  sm:px-[12%] 2xl:px-[16%]">
         <h2 className=" text-[46px] font-extrabold leading-[0.8] text-color-secondary antialiased sm:w-full sm:text-[78px] 2xl:text-[100px]">
           Lobe <span className=" text-color-primary">Examples</span>
@@ -73,48 +78,56 @@ export default function ExamplesCorusel() {
               videoSrc={videoBees}
               videoPoster={imageBees}
               title="Beehive Health"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoLaughing}
               videoPoster={imageLaughing}
               title="Emotional Reactions"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoPaintingWithMike}
               videoPoster={imagePaintingWithMike}
               title="Interactive Painting"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoFeelTheBurn}
               videoPoster={imageFeelTheBurn}
               title="Personal Trainer"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoHandCount}
               videoPoster={imageHandCount}
               title="Hand Gestures"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoPlants}
               videoPoster={imagePlants}
               title="Plant Species"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoWhales}
               videoPoster={imageWhales}
               title="Whale Watching"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoMaskUp}
               videoPoster={imageMaskUp}
               title="Safety Precautions"
+              play={divCarouselOnScreen}
             />
           </Carousel>
 
@@ -130,48 +143,56 @@ export default function ExamplesCorusel() {
               videoSrc={videoAfricanWildLife}
               videoPoster={imageAfricanWildLife}
               title="Wildlife Behavior"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoCheckout}
               videoPoster={imageCheckout}
               title="Smart Checkout"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoCompression}
               videoPoster={imageCompression}
               title="Equipment Analytics"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoDeforestation}
               videoPoster={imageDeforestation}
               title="Aerial Imagery"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoMicroscope}
               videoPoster={imageMicroscope}
               title="Scientific Research"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoSleeping}
               videoPoster={imageSleeping}
               title="Baby Monitor"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoTelescope}
               videoPoster={imageTelescope}
               title="Telescopic Imagery"
+              play={divCarouselOnScreen}
             />
             <VideoItem
               linkTo={NavPaths.Examples.path}
               videoSrc={videoWildfire}
               videoPoster={imageWildfire}
               title="Fire Watch"
+              play={divCarouselOnScreen}
             />
           </Carousel>
         </div>

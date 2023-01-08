@@ -6,12 +6,14 @@ interface IVideoItemsProps {
   videoSrc: string;
   videoPoster: string;
   title: string;
+  play: boolean;
 }
 export default function VideoItem({
   linkTo,
   videoSrc,
   videoPoster,
   title,
+  play,
 }: IVideoItemsProps) {
   return (
     <div className="flex items-center justify-center p-2  sm:p-7  2xl:p-5">
@@ -28,7 +30,7 @@ export default function VideoItem({
               className: "rounded-[32px] z-20",
             },
           }}
-          playing={true}
+          playing={play}
           width="100%"
           height="auto"
           loop={true}

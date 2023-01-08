@@ -33,12 +33,13 @@ export default function Carousel({
   animationDirection,
   animationSpeed,
 }: Props) {
-  const [arrayChildren] = useState(Children.toArray(children));
+  //const [arrayChildren] = useState(Children.toArray(children));
+  const arrayChildren = Children.toArray(children);
 
   if (!arrayChildren) {
     return null;
   }
-
+  console.log("Re-rendering carousel...");
   return (
     <div
       className="slider"

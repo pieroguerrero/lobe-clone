@@ -6,8 +6,12 @@ import MediaQueries from "../../../../../utilities/MediaQueries";
 
 interface IHeroVideoProps {
   changeText(text: string): void;
+  play: boolean;
 }
-export default function HeroVideo({ changeText }: IHeroVideoProps) {
+export default function HeroVideo({
+  changeText,
+  play = true,
+}: IHeroVideoProps) {
   const [textsToChange] = useState([
     "identify plants",
     "see gestures",
@@ -17,11 +21,10 @@ export default function HeroVideo({ changeText }: IHeroVideoProps) {
     "check safety",
     "identify plants",
   ]);
-
   return (
     <ReactPlayer
       url={MediaQueries.minWidth640px.matches ? desktopVideo : mobileVideo}
-      playing={true}
+      playing={play}
       width="100%"
       height="auto"
       loop={true}
