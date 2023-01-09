@@ -2,14 +2,10 @@ import { MutableRefObject } from "react";
 import { MaybeRef } from "./Types";
 
 const UtilFunctions = (() => {
-  const round = (num: number) => Math.round(num * 1e2) / 1e2;
-
   const isRef = (obj: unknown): boolean =>
     obj !== null &&
     typeof obj === "object" &&
     Object.prototype.hasOwnProperty.call(obj, "current");
-
-  const isString = (val: unknown): val is string => typeof val === "string";
 
   const unRef = <T = HTMLElement>(target: MaybeRef<T>): T => {
     const element = isRef(target)
@@ -19,8 +15,8 @@ const UtilFunctions = (() => {
     return element;
   };
 
-  return { round, isRef, unRef, isString };
+  return { isRef, unRef };
 })();
-const { round, isRef, unRef, isString } = UtilFunctions;
+const { isRef, unRef } = UtilFunctions;
 
-export { round, isRef, unRef, isString };
+export { isRef, unRef };

@@ -9,6 +9,7 @@ export default function useScrollTopDistance(
   callback: (scrollTopDistance: number) => void,
   withRefresh = false
 ) {
+  //can we use react useMemo for the callback function?
   useEffect(
     () => {
       const onScroll = (e: Event) => {

@@ -1,12 +1,20 @@
 import { NavLink } from "react-router-dom";
 
-interface Props {
+interface IMenuOptionMobile {
   to: string;
   text: string;
+  handleClose(): void;
 }
-export default function MenuOptionMobile({ to, text }: Props) {
+export default function MenuOptionMobile({
+  to,
+  text,
+  handleClose,
+}: IMenuOptionMobile) {
   return (
     <NavLink
+      onClick={() => {
+        handleClose();
+      }}
       to={to}
       className={({ isActive }) =>
         isActive

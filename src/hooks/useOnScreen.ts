@@ -20,7 +20,12 @@ export default function useOnScreen<T extends Element>(
       observer.observe(ref.current);
     }
     return () => {
-      observer.unobserve(ref.current);
+      if (observer) {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+        observer.disconnect();
+      }
     };
   }, []); // Empty array ensures that effect is only run on mount and unmount
   return isIntersecting;

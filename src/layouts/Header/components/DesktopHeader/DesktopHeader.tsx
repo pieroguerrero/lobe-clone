@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import NavPaths from "../../../../utilities/NavPaths";
 import MenuOption from "./components/MenuOption";
 import logoSVG from "../../../../assets/images/logo.svg";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import useScrollTopDistance from "../../../../hooks/useScrollTopDistance";
 
 export default function DesktopHeader() {

@@ -39,7 +39,6 @@ export default function Carousel({
   if (!arrayChildren) {
     return null;
   }
-  console.log("Re-rendering carousel...");
   return (
     <div
       className="slider"
