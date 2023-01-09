@@ -9,7 +9,7 @@ const Testimonials = lazy(
 
 export default function Overview() {
   return (
-    <main className="flex w-full flex-col ">
+    <main className="flex w-full flex-col">
       <Hero />
       <Suspense>
         <Features />

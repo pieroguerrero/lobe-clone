@@ -70,7 +70,7 @@ export default function ExamplesCorusel() {
             itemHeight={itemHeight}
             itemWidth={itemWidth}
             shadowsWidth={0}
-            animationDirection="RL"
+            animationDirection={divCarouselOnScreen ? "RL" : "none"}
             animationSpeed={140}
           >
             <VideoItem
@@ -135,7 +135,7 @@ export default function ExamplesCorusel() {
             itemHeight={itemHeight}
             itemWidth={itemWidth}
             shadowsWidth={0}
-            animationDirection="LR"
+            animationDirection={divCarouselOnScreen ? "LR" : "none"}
             animationSpeed={140}
           >
             <VideoItem

@@ -10,7 +10,7 @@ import Step from "./components/Step";
 export default function HowToUse() {
   const isMinWidth640px = MediaQueries.minWidth640px.matches;
   return (
-    <section className="flex flex-col">
+    <section className=" flex flex-col">
       <div className="mt-12 mb-11 flex w-full flex-col px-7 sm:mb-14 sm:mt-24 sm:px-[12%]  2xl:px-[16%]">
         <h2 className=" text-[46px] font-extrabold leading-[0.8] text-color-secondary antialiased sm:w-full sm:text-[78px] 2xl:text-[100px]">
           Label, Train, <span className=" text-color-primary">Use</span>

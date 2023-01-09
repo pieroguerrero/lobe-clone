@@ -1,4 +1,4 @@
-import { lazy, MutableRefObject, Suspense, useRef, useState } from "react";
+import { lazy, Suspense, useRef, useState } from "react";
 import useOnScreen from "../../../../hooks/useOnScreen";
 import MediaQueries from "../../../../utilities/MediaQueries";
 import FallBackVideo from "./components/FallBackVideo";
@@ -18,7 +18,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center sm:items-start sm:pt-20 ">
+    <section className=" relative flex min-h-screen w-full flex-col items-center justify-center sm:items-start sm:pt-20 ">
       <div className=" flex w-full flex-col-reverse items-center justify-center sm:flex-row  sm:justify-between sm:px-[12%] 2xl:px-[16%] ">
         <div className=" z-20 mt-[-90px] sm:static  sm:mt-0 sm:mb-20   2xl:mb-[85px]  ">
           <h1 className="  mb-4  flex flex-col items-center justify-center text-5xl sm:items-start sm:text-[78px] 2xl:text-[100px]">
