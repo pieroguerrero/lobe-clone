@@ -15,12 +15,12 @@ export default function TourVideoContainer() {
       MediaQueries.minWidth640px.matches
     );
     return MediaQueries.minWidth640px.matches;
-  }, [MediaQueries.minWidth640px.matches]);
+  }, []);
 
   const togglePopUp = (isOpen: boolean) => {
     setShowPopUp(isOpen);
   };
-  console.log("getWebOrigin():", getWebOrigin());
+
   return (
     <section className="px-8 pt-16 sm:px-[15%] sm:pt-20 2xl:px-[20%]">
       <button
@@ -36,7 +36,7 @@ export default function TourVideoContainer() {
       {showPopUp ? (
         <ModalPopUp>
           <div
-            className=" flex h-full w-full flex-col items-center bg-black bg-opacity-60    "
+            className=" flex h-full w-full flex-col items-center bg-black bg-opacity-95  sm:bg-opacity-60    "
             onClick={togglePopUp.bind(null, false)}
           >
             <div className=" flex h-16 w-full justify-end p-5">
@@ -48,7 +48,7 @@ export default function TourVideoContainer() {
               </button>
             </div>
             <iframe
-              className=" rounded-3xl bg-transparent blur-0 2xl:h-[950px] 2xl:w-[1522px]"
+              className=" mt-28 aspect-video w-full bg-transparent blur-0 sm:mt-0 sm:aspect-auto sm:h-[674px] sm:w-[1079px] sm:rounded-3xl 2xl:h-[950px] 2xl:w-[1522px]"
               style={{
                 clipPath: "inset(1px 1px)",
               }}
