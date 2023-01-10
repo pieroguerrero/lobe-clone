@@ -18,3 +18,38 @@ body {
 .textleginility {
   text-rendering: optimizeLegibility;
 }
+
+@keyframes slideDown {
+  from {
+    transform: scaleY(0);
+    /* margin-top: -50%; */
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: scaleY(1);
+    /* margin-top: -50%; */
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
+.vertical-drawer-open {
+  transform-origin: top center;
+  animation-name: slideDown;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}

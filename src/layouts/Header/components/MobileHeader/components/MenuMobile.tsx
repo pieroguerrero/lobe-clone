@@ -6,7 +6,7 @@ interface IMenuMobileProps {
 }
 export default function MenuMobile({ handleClose }: IMenuMobileProps) {
   return (
-    <div className=" relative  z-30 flex  w-full flex-col border-t-[1px]  border-color-tertiary-soft  ">
+    <div className="  vertical-drawer-open  relative z-20 flex w-full flex-col  border-t-[1px] border-color-tertiary-soft bg-color-quaternary   bg-opacity-95 shadow-xl ">
       <nav className=" flex flex-col  pt-3 ">
         <MenuOptionMobile
           to={""}

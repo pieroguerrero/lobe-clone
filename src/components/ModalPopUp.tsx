@@ -12,7 +12,10 @@ interface IModalPopUp {
 export default function ModalPopUp({ children }: IModalPopUp) {
   useLayoutEffect(() => {
     const htmlElement = document.documentElement;
-
+    htmlElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     htmlElement.classList.add("overflow-hidden");
     return () => {
       htmlElement.classList.remove("overflow-hidden");
@@ -26,7 +29,10 @@ export default function ModalPopUp({ children }: IModalPopUp) {
   }
 
   return createPortal(
-    <div className="absolute top-0 left-0 z-50 h-screen w-screen">
+    <div
+      className="absolute top-0 left-0 z-50 w-full"
+      style={{ height: document.body.scrollHeight.toString() + "px" }}
+    >
       {children}
     </div>,
     wrapperElement
