@@ -1,7 +1,10 @@
 @keyframes lr {
   0% {
     transform: translateX(
-      calc(-1 * var(--data-slide-width) * var(--number-of-elements) / 2)
+      calc(
+        -1 * ((var(--data-slide-width) * var(--number-of-elements) / 2) +
+              var(--data-slide-width))
+      )
     );
   }
   100% {
@@ -15,10 +18,30 @@
   }
   100% {
     transform: translateX(
-      calc(-1 * var(--data-slide-width) * var(--number-of-elements) / 2)
+      calc(
+        -1 * ((var(--data-slide-width) * var(--number-of-elements) / 2) +
+              var(--data-slide-width))
+      )
     );
   }
 }
+
+/* @keyframes rl {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(
+      calc(
+        -1 * ((var(--data-slide-width) * var(--number-of-elements) / 2) +
+              var(--data-slide-width))
+      )
+    );
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
 
 .slider {
   height: var(--data-slide-height);

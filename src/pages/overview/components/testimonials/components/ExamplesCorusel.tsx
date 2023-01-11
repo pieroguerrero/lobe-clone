@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef } from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import imageBees from "../../../../../assets/images/testimonials/lr/Bees.jpg";
 import imageFeelTheBurn from "../../../../../assets/images/testimonials/lr/Feel the Burn.jpg";
@@ -39,16 +39,22 @@ import Carousel from "./carousel/Carousel";
 import VideoItem from "./VideoItem";
 
 export default function ExamplesCorusel() {
-  const [minWidth1536px] = useState(MediaQueries.minWidth1536px.matches);
-  const [minWidth640px] = useState(MediaQueries.minWidth640px.matches);
+  const { minWidth640px, itemWidth, itemHeight } = useMemo(() => {
+    const minWidth1536px = MediaQueries.minWidth1536px.matches;
+    const minWidth640px = MediaQueries.minWidth640px.matches;
+
+    return {
+      minWidth640px,
+      itemWidth: minWidth1536px ? 600 : minWidth640px ? 540 : 295,
+      itemHeight: minWidth1536px ? 420 : minWidth640px ? 379 : 210,
+    };
+  }, []);
+
   const divCarouselRef: any = useRef<HTMLDivElement>();
   const divCarouselOnScreen = useOnScreen<HTMLDivElement>(
     divCarouselRef,
-    MediaQueries.minWidth640px.matches ? "-200px" : "20px"
+    minWidth640px ? "-300px" : "20px"
   );
-
-  const itemWidth = minWidth1536px ? 600 : minWidth640px ? 540 : 295;
-  const itemHeight = minWidth1536px ? 420 : minWidth640px ? 379 : 210;
 
   return (
     <div
@@ -71,7 +77,7 @@ export default function ExamplesCorusel() {
             itemWidth={itemWidth}
             shadowsWidth={0}
             animationDirection={divCarouselOnScreen ? "RL" : "none"}
-            animationSpeed={140}
+            animationSpeed={40}
           >
             <VideoItem
               linkTo={NavPaths.Examples.path}
@@ -136,7 +142,7 @@ export default function ExamplesCorusel() {
             itemWidth={itemWidth}
             shadowsWidth={0}
             animationDirection={divCarouselOnScreen ? "LR" : "none"}
-            animationSpeed={140}
+            animationSpeed={40}
           >
             <VideoItem
               linkTo={NavPaths.Examples.path}

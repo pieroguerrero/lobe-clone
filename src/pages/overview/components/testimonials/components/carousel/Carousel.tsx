@@ -1,8 +1,7 @@
 //TODO: check the carousel here: https://codepen.io/pieroguerrero/pen/rNrMVXb
 //Pending to downaload the other files for the second carousel
 
-import React, { Children, ReactElement, useState } from "react";
-import CarouselItem from "./CarouselItem";
+import React, { Children, ReactElement, useMemo } from "react";
 import "./Carousel.css";
 
 interface Props {
@@ -33,12 +32,13 @@ export default function Carousel({
   animationDirection,
   animationSpeed,
 }: Props) {
-  //const [arrayChildren] = useState(Children.toArray(children));
-  const arrayChildren = Children.toArray(children);
+  const arrayLenght = useMemo(
+    () => Children.toArray(children).length,
+    [children]
+  );
 
-  if (!arrayChildren) {
-    return null;
-  }
+  console.log("Carousel loading");
+
   return (
     <div
       className="slider"
@@ -49,15 +49,11 @@ export default function Carousel({
           "--data-slide-width": itemWidth.toString() + "px",
           "--data-slide-height": itemHeight.toString() + "px",
           "--white-gradient-width": shadowsWidth.toString() + "px",
-          "--number-of-elements": arrayChildren.length * 2,
+          "--number-of-elements": arrayLenght,
         } as React.CSSProperties
       }
     >
-      <div className="slide-track">
-        {[...arrayChildren, ...arrayChildren].map((child, index) => {
-          return <CarouselItem key={index}>{child}</CarouselItem>;
-        })}
-      </div>
+      <div className="slide-track">{children}</div>
     </div>
   );
 }

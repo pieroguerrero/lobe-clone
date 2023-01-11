@@ -6,12 +6,17 @@
 
 @layer base {
   body {
-    @apply font-darker-grotesque;
+    @apply overflow-hidden font-darker-grotesque;
   }
 }
 
-html,
-body {
+@layer components {
+  .h1-style {
+    @apply text-[48px] font-extrabold leading-[0.9]  antialiased sm:text-[81px] 2xl:text-[101px];
+  }
+}
+
+html {
   overflow-x: hidden;
 }
 
