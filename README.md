@@ -19,4 +19,4 @@
 - Lazy Loading for Images and Components with Lazy, Suspense and the react-lazy-load-image-component library.
 - Font import optimization with .... font-display (swap) https://web.dev/optimize-webfont-loading/
 - CDN ready for the files.. (I have to get the URL for the files in a function or component)
-- Intersection Observer for the video playback
+- Intersection Observer for the video playback.
