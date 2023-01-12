@@ -83,7 +83,7 @@ export default function Hero() {
           </Suspense>
         </div>
       </div>
-      <div className="absolute bottom-5 flex w-full animate-bounce items-center justify-center sm:bottom-6">
+      <div className="flex w-full  animate-bounce items-center justify-center pt-5 sm:absolute sm:bottom-6  sm:pt-0">
         <svg width="58px" height="24px" viewBox="0 0 58 24" version="1.1">
           <title>See More</title>
           <g
