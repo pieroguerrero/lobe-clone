@@ -23,7 +23,7 @@ export default function Credits({
             id="link-footer"
             target="_blank"
             href={url}
-            className="font-semibold hover:underline"
+            className="font-bold hover:underline"
             rel="noreferrer"
           >
             {"pieroguerrero"}
