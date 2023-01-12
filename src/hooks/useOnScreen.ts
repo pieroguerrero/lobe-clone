@@ -2,6 +2,9 @@ import { MutableRefObject, useEffect, useState } from "react";
 
 export default function useOnScreen<T extends Element>(
   ref: MutableRefObject<T>,
+  /**
+   * For example a value of -200px indicates that at least 200px of the element has to be visible on the viewport to be consideren 'on the screen'.
+   */
   rootMargin = "0px"
 ): boolean {
   // State and setter for storing whether element is visible

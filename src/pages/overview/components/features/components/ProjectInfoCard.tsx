@@ -25,7 +25,7 @@ export default function ProjectInfoCard({
             playing={true}
             width="100%"
             height="auto"
-            loop={true}
+            loop={false}
             controls={false}
             muted={true}
             style={{

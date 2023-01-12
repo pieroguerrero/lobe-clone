@@ -1,26 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import NavPaths from "../../../../utilities/NavPaths";
 import MenuOption from "./components/MenuOption";
 import logoSVG from "../../../../assets/images/logo.svg";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import useScrollTopDistance from "../../../../hooks/useScrollTopDistance";
 
 export default function DesktopHeader() {
   const [isButtonColorAccent, setIsButtonColorAccent] = useState(false);
+  const location = useLocation();
   const refIsButtonColorAccent = useRef(false);
   refIsButtonColorAccent.current = isButtonColorAccent;
-  useScrollTopDistance((distance: number) => {
-    //console.log({ distance, isButtonColorAccent: ref.current });
-    if (distance > 300 && !refIsButtonColorAccent.current) {
-      setIsButtonColorAccent(true);
-      return;
-    }
 
-    if (distance <= 300 && refIsButtonColorAccent.current) {
-      setIsButtonColorAccent(false);
-      return;
-    }
-  });
+  useScrollTopDistance(
+    (distance: number) => {
+      //console.log({ distance, isButtonColorAccent: ref.current });
+      if (distance > 300 && !refIsButtonColorAccent.current) {
+        setIsButtonColorAccent(true);
+        return;
+      }
+
+      if (distance <= 300 && refIsButtonColorAccent.current) {
+        setIsButtonColorAccent(false);
+        return;
+      }
+    },
+    false,
+    location.pathname !== "/"
+  );
 
   return (
     <header className=" fixed top-0 z-30 flex w-full justify-center bg-color-quaternary px-10 opacity-90">
@@ -47,7 +53,7 @@ export default function DesktopHeader() {
           className={
             "h-12 w-[129px] rounded-3xl  text-[22px] font-bold" +
             " " +
-            (isButtonColorAccent
+            (isButtonColorAccent || location.pathname !== "/"
               ? " bg-color-primary text-color-quaternary"
               : "bg-[#eef0f2] text-color-secondary")
           }

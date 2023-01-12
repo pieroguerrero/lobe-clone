@@ -1,5 +1,5 @@
 const NavPaths = Object.freeze({
-  Unknown: "*",
+  Unknown: { path: "*", name: "Unkwnow page" },
   Base: { path: "/lobe", name: "Overview" },
   Examples: { path: "examples", name: "Examples" },
   Tour: { path: "tour", name: "Tour" },

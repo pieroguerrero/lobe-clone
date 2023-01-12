@@ -1,11 +1,10 @@
-import { lazy, Suspense, useRef, useState } from "react";
+import { lazy, Suspense, useMemo, useRef, useState } from "react";
 import useOnScreen from "../../../../hooks/useOnScreen";
 import MediaQueries from "../../../../utilities/MediaQueries";
-import FallBackVideo from "./components/FallBackVideo";
 const HeroVideo = lazy(() => import("./components/HeroVideo"));
 
 export default function Hero() {
-  const [isMinWidth640px] = useState(MediaQueries.minWidth640px.matches);
+  const isMinWidth640px = useMemo(() => MediaQueries.minWidth640px.matches, []);
   const [heroSecondaryText, setHeroSecondaryText] = useState("identify plants");
   const divVideoRef: any = useRef<HTMLDivElement>();
   const divVideoOnScreen = useOnScreen<HTMLDivElement>(
@@ -78,7 +77,8 @@ export default function Hero() {
           ref={divVideoRef}
           className="min-w-[420px] max-w-[475px] sm:w-[600px] sm:min-w-0 sm:max-w-none 2xl:w-[680px]"
         >
-          <Suspense fallback={<FallBackVideo isMobile={!isMinWidth640px} />}>
+          {/* <Suspense fallback={<FallBackVideo isMobile={!isMinWidth640px} />}> */}
+          <Suspense>
             <HeroVideo changeText={handleTextChange} play={divVideoOnScreen} />
           </Suspense>
         </div>

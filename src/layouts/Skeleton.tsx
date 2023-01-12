@@ -1,14 +1,18 @@
+import { lazy, Suspense, useMemo } from "react";
 import { Outlet } from "react-router-dom";
 import MediaQueries from "../utilities/MediaQueries";
-import Footer from "./Footer/Footer";
+const Footer = lazy(() => import("./Footer/Footer"));
 import Header from "./Header/Header";
 
 export default function Skeleton() {
+  const isMinWidth640px = useMemo(() => MediaQueries.minWidth640px.matches, []);
   return (
     <div className=" flex h-full  min-h-screen w-full  flex-col items-center">
-      <Header isMobile={!MediaQueries.minWidth640px.matches} />
+      <Header isMobile={!isMinWidth640px} />
       <Outlet />
-      <Footer />
+      <Suspense>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

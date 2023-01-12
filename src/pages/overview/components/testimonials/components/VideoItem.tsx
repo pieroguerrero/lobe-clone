@@ -15,10 +15,6 @@ export default function VideoItem({
   title,
   play,
 }: IVideoItemsProps) {
-  if (videoSrc.toLowerCase().includes("bees")) {
-    console.log("Loading Bees video component", { play });
-  }
-
   return (
     <div className="flex items-center justify-center p-2  sm:p-7  2xl:p-5">
       <Link
@@ -52,7 +48,7 @@ export default function VideoItem({
           playing={play}
           width="100%"
           height="auto"
-          loop={true}
+          loop={false}
           controls={false}
           muted={true}
         />

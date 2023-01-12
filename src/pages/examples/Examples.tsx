@@ -34,7 +34,6 @@ import CallToAction from "../../components/CallToAction";
 import HeadingTitle from "../../components/HeadingTitle";
 import ExampleItem from "./components/ExampleItem";
 
-console.log("Examples file");
 export default function Examples() {
   const isPlaying = true;
   return (
@@ -62,7 +61,7 @@ export default function Examples() {
           />
           <ExampleItem
             videoSrc={videoFeelTheBurn}
-            posterSrc={videoFeelTheBurn}
+            posterSrc={imageFeelTheBurn}
             play={isPlaying}
             title="Personal Trainer"
             description="Train your app to recognize different workout positions to create an automated personal trainer that counts your reps."

@@ -1,5 +1,5 @@
-import imgMobile from "../../../../../assets/videos/fallbackMobileVideo.jpg";
-import imgDesktop from "../../../../../assets/videos/fallbackDesktopVideo.jpg";
+import imgMobile from "../../../../../assets/images/hero/fallbackMobileVideo.webp";
+import imgDesktop from "../../../../../assets/images/hero/fallbackDesktopVideo.webp";
 interface Props {
   isMobile: boolean;
 }

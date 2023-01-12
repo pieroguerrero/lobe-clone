@@ -37,8 +37,6 @@ export default function Carousel({
     [children]
   );
 
-  console.log("Carousel loading");
-
   return (
     <div
       className="slider"

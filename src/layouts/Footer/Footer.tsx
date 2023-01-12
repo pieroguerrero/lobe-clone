@@ -5,6 +5,7 @@ import RoundedLink from "./components/RoundedLink";
 import svgReddit from "../../assets/images/footer/reddit.svg";
 import svgYoutube from "../../assets/images/footer/youtube.svg";
 import svgTwitter from "../../assets/images/footer/twitter.svg";
+import Credits from "../../components/Credits";
 export default function Footer() {
   return (
     <footer className="w-full">
@@ -80,6 +81,11 @@ export default function Footer() {
           />
         </div>
       </div>
+      <Credits
+        textColorClass="text-white font-bold"
+        backgroundColorClass="bg-color-primary"
+        url="https://github.com/pieroguerrero"
+      />
     </footer>
   );
 }

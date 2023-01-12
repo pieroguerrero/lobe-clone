@@ -10,10 +10,6 @@ export default function TourVideoContainer() {
   const [showPopUp, setShowPopUp] = useState(false);
 
   const isMinWidth640px = useMemo(() => {
-    console.log(
-      "MediaQueries.minWidth640px: ",
-      MediaQueries.minWidth640px.matches
-    );
     return MediaQueries.minWidth640px.matches;
   }, []);
 

@@ -1,4 +1,7 @@
+import { useMemo, useRef } from "react";
 import ReactPlayer from "react-player/file";
+import useOnScreen from "../../../hooks/useOnScreen";
+import MediaQueries from "../../../utilities/MediaQueries";
 
 interface IExampleItem {
   videoSrc: string;
@@ -14,9 +17,16 @@ export default function ExampleItem({
   title,
   description,
 }: IExampleItem) {
+  const isMinWidth640px = useMemo(() => MediaQueries.minWidth640px.matches, []);
+  const divVideo: any = useRef<HTMLDivElement>();
+  const isOnScreen = useOnScreen<HTMLDivElement>(
+    divVideo,
+    isMinWidth640px ? "-20px" : "-100px"
+  );
+
   return (
     <div className=" flex h-auto w-full flex-col overflow-hidden rounded-[20px] bg-white shadow-2xl sm:w-[518px] sm:rounded-[32px] 2xl:w-[600px]">
-      <div className="w-full">
+      <div className="w-full " ref={divVideo}>
         <ReactPlayer
           url={videoSrc}
           config={{
@@ -25,10 +35,10 @@ export default function ExampleItem({
               className: "rounded-t-[20px]  sm:rounded-t-[32px]",
             },
           }}
-          playing={play}
+          playing={play && isOnScreen}
           width="100%"
           height="auto"
-          loop={true}
+          loop={isMinWidth640px ? true : false}
           controls={false}
           muted={true}
         />

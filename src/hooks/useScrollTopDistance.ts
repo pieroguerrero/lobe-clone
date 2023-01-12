@@ -7,7 +7,11 @@ import { useEffect } from "react";
  */
 export default function useScrollTopDistance(
   callback: (scrollTopDistance: number) => void,
-  withRefresh = false
+  withCallbackRefresh: boolean,
+  /**
+   * Indicates if it should stop listening on the onScroll window event.
+   */
+  stopListening = false
 ) {
   //can we use react useMemo for the callback function?
   useEffect(
@@ -16,11 +20,12 @@ export default function useScrollTopDistance(
         //Other values that can be used are window.pageYOffset or document.body.scrollTop
         callback(document.documentElement.scrollTop);
       };
-
-      window.addEventListener("scroll", onScroll);
+      if (!stopListening) {
+        window.addEventListener("scroll", onScroll);
+      }
 
       return () => window.removeEventListener("scroll", onScroll);
     },
-    withRefresh ? [callback] : []
+    withCallbackRefresh ? [callback, stopListening] : [stopListening]
   );
 }
