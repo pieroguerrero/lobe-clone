@@ -19,10 +19,11 @@ function App() {
             <Route path={NavPaths.Examples.path} element={<Examples />} />
             <Route path={NavPaths.Blog.path} element={<ComingSoon />} />
             <Route path={NavPaths.Help.path} element={<ComingSoon />} />
+            <Route path={NavPaths.Soon.path} element={<ComingSoon />} />
           </Route>
           <Route
             path={NavPaths.Unknown.path}
-            element={<Navigate replace={true} to={"/"} />}
+            element={<Navigate replace={true} to={NavPaths.Root.path} />}
           />
         </Routes>
       </BrowserRouter>

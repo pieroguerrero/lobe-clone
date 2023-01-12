@@ -35,7 +35,7 @@ export default function Footer() {
             title="About"
             links={[
               { name: "Download", href: NavPaths.Examples.path },
-              { name: "Overview", href: NavPaths.Base.path },
+              { name: "Overview", href: NavPaths.Root.path },
               { name: "Examples", href: NavPaths.Examples.path },
               { name: "Blog", href: NavPaths.Blog.path },
             ]}

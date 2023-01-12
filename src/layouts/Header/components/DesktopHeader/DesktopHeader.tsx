@@ -25,7 +25,7 @@ export default function DesktopHeader() {
       }
     },
     false,
-    location.pathname !== "/"
+    location.pathname !== NavPaths.Root.path
   );
 
   return (
@@ -53,7 +53,7 @@ export default function DesktopHeader() {
           className={
             "h-12 w-[129px] rounded-3xl  text-[22px] font-bold" +
             " " +
-            (isButtonColorAccent || location.pathname !== "/"
+            (isButtonColorAccent || location.pathname !== NavPaths.Root.path
               ? " bg-color-primary text-color-quaternary"
               : "bg-[#eef0f2] text-color-secondary")
           }
