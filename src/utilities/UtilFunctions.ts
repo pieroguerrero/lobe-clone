@@ -1,7 +1,30 @@
 import { MutableRefObject } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { ElementTypeName, MaybeRef } from "./Types";
 
 const UtilFunctions = (() => {
+  /**
+   * Shows a Toast indicating that the page is just a clone of the original Linkedin.
+   */
+  const showOveralWarning = () => {
+    const id = toast.error(
+      "This page is not the original Lobe.ai, it was created for learning purposes. Please, do not enter any valid information.",
+      {
+        position: "top-center",
+        autoClose: 12000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        pauseOnFocusLoss: false,
+        draggable: true,
+        progress: undefined,
+        rtl: false,
+        theme: "light",
+      }
+    );
+  };
+
   const isRef = (obj: unknown): boolean =>
     obj !== null &&
     typeof obj === "object" &&
@@ -50,8 +73,26 @@ const UtilFunctions = (() => {
    */
   const getWebOrigin = () => window.location.origin;
 
-  return { isRef, unRef, createAndAppendElement, getWebOrigin };
+  return {
+    isRef,
+    unRef,
+    createAndAppendElement,
+    getWebOrigin,
+    showOveralWarning,
+  };
 })();
-const { isRef, unRef, createAndAppendElement, getWebOrigin } = UtilFunctions;
+const {
+  isRef,
+  unRef,
+  createAndAppendElement,
+  getWebOrigin,
+  showOveralWarning,
+} = UtilFunctions;
 
-export { isRef, unRef, createAndAppendElement, getWebOrigin };
+export {
+  isRef,
+  unRef,
+  createAndAppendElement,
+  getWebOrigin,
+  showOveralWarning,
+};
