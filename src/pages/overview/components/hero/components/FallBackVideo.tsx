@@ -5,10 +5,6 @@ interface Props {
 }
 export default function FallBackVideo({ isMobile }: Props) {
   return (
-    <img
-      loading="lazy"
-      src={isMobile ? imgMobile : imgDesktop}
-      alt="Fallback video image"
-    />
+    <img src={isMobile ? imgMobile : imgDesktop} alt="Fallback video image" />
   );
 }

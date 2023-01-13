@@ -1,6 +1,8 @@
 import { lazy, Suspense, useMemo, useRef, useState } from "react";
 import useOnScreen from "../../../../hooks/useOnScreen";
 import MediaQueries from "../../../../utilities/MediaQueries";
+import FallBackVideo from "./components/FallBackVideo";
+//import HeroVideo from "./components/HeroVideo";
 const HeroVideo = lazy(() => import("./components/HeroVideo"));
 
 export default function Hero() {
@@ -77,8 +79,8 @@ export default function Hero() {
           ref={divVideoRef}
           className="min-w-[420px] max-w-[475px] sm:w-[600px] sm:min-w-0 sm:max-w-none 2xl:w-[680px]"
         >
-          {/* <Suspense fallback={<FallBackVideo isMobile={!isMinWidth640px} />}> */}
-          <Suspense>
+          <Suspense fallback={<FallBackVideo isMobile={!isMinWidth640px} />}>
+            {/* <Suspense> */}
             <HeroVideo changeText={handleTextChange} play={divVideoOnScreen} />
           </Suspense>
         </div>

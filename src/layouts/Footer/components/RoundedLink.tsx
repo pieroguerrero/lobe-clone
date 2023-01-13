@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 interface IRoundedLinkProps {
   imgSrc: string;
   href: string;
@@ -18,6 +16,7 @@ export default function RoundedLink({
       className=" flex h-10 w-10 items-center justify-center rounded-full bg-color-primary sm:h-8 sm:w-8 2xl:h-10 2xl:w-10"
     >
       <img
+        loading="lazy"
         className="h-[26px] w-auto sm:h-[22px] 2xl:h-[26px]"
         src={imgSrc}
         alt={tooltip}
