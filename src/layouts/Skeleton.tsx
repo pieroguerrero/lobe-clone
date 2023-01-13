@@ -3,6 +3,11 @@ import { Outlet } from "react-router-dom";
 import MediaQueries from "../utilities/MediaQueries";
 const Footer = lazy(() => import("./Footer/Footer"));
 import Header from "./Header/Header";
+const ToastContainer = lazy(() =>
+  import("react-toastify").then((module) => ({
+    default: module.ToastContainer,
+  }))
+);
 
 export default function Skeleton() {
   const isMinWidth640px = useMemo(() => MediaQueries.minWidth640px.matches, []);
@@ -13,6 +18,8 @@ export default function Skeleton() {
       <Suspense>
         <Footer />
       </Suspense>
+
+      <ToastContainer />
     </div>
   );
 }

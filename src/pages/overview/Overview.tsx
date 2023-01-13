@@ -7,11 +7,6 @@ const HowToUse = lazy(() => import("./components/howToUse/HowToUse"));
 const Testimonials = lazy(
   () => import("./components/testimonials/Testimonials")
 );
-const ToastContainer = lazy(() =>
-  import("react-toastify").then((module) => ({
-    default: module.ToastContainer,
-  }))
-);
 
 export default function Overview() {
   useEffect(() => {
@@ -25,7 +20,6 @@ export default function Overview() {
         <HowToUse />
         <Testimonials />
         <CallToAction />
-        <ToastContainer />
       </Suspense>
     </main>
   );

@@ -2,8 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import NavPaths from "../../../../utilities/NavPaths";
 import MenuOption from "./components/MenuOption";
 import logoSVG from "../../../../assets/images/logo.svg";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import useScrollTopDistance from "../../../../hooks/useScrollTopDistance";
+import { showOveralWarning } from "../../../../utilities/UtilFunctions";
 
 export default function DesktopHeader() {
   const [isButtonColorAccent, setIsButtonColorAccent] = useState(false);
@@ -50,6 +51,9 @@ export default function DesktopHeader() {
           <MenuOption to={NavPaths.Help.path} text={NavPaths.Help.name} />
         </nav>
         <button
+          onClick={() => {
+            showOveralWarning();
+          }}
           className={
             "h-12 w-[129px] rounded-3xl  text-[22px] font-bold" +
             " " +

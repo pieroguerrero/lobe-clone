@@ -1,6 +1,7 @@
 import { lazy, Suspense, useMemo, useRef, useState } from "react";
 import useOnScreen from "../../../../hooks/useOnScreen";
 import MediaQueries from "../../../../utilities/MediaQueries";
+import { showOveralWarning } from "../../../../utilities/UtilFunctions";
 import FallBackVideo from "./components/FallBackVideo";
 //import HeroVideo from "./components/HeroVideo";
 const HeroVideo = lazy(() => import("./components/HeroVideo"));
@@ -40,7 +41,12 @@ export default function Hero() {
               : "Create machine learning models with a free, easy to use tool."}
           </div>
           <div className="flex justify-center gap-6 sm:justify-start ">
-            <button className="flex h-[42px] w-[148px] transform items-center justify-center rounded-[50px] bg-color-primary text-[23px] font-extrabold leading-none text-color-quaternary duration-300 hover:scale-105 hover:transform hover:duration-300 sm:h-[50px] sm:w-[168px] sm:text-[25px] 2xl:h-16 2xl:w-[200px] 2xl:text-3xl">
+            <button
+              onClick={() => {
+                showOveralWarning();
+              }}
+              className="flex h-[42px] w-[148px] transform items-center justify-center rounded-[50px] bg-color-primary text-[23px] font-extrabold leading-none text-color-quaternary duration-300 hover:scale-105 hover:transform hover:duration-300 sm:h-[50px] sm:w-[168px] sm:text-[25px] 2xl:h-16 2xl:w-[200px] 2xl:text-3xl"
+            >
               Download
             </button>
             <button className=" flex h-[42px] w-[148px] transform items-center justify-center gap-1 text-[23px] font-extrabold leading-none text-color-primary  duration-300 hover:scale-105 hover:transform hover:duration-300 sm:h-[50px] sm:w-[168px] sm:text-[25px] 2xl:h-16 2xl:w-[200px] 2xl:text-3xl">
