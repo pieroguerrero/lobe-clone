@@ -36,14 +36,14 @@ export default function MenuMobile({ handleClose }: IMenuMobileProps) {
         />
       </nav>
       <div className="flex items-center justify-center  px-[27px]">
-        <button
+        <div
           onClick={() => {
             showOveralWarning();
           }}
-          className="mt-[37px] mb-[32px] h-[50px] w-full rounded-[50px] bg-color-primary bg-opacity-100 text-2xl font-bold text-color-quaternary "
+          className="mt-[37px] mb-[32px] flex h-[50px]  w-full items-center justify-center rounded-[50px] bg-color-primary bg-opacity-100 text-2xl font-bold text-color-quaternary "
         >
           Download
-        </button>
+        </div>
       </div>
     </div>
   );

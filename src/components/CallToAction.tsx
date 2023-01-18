@@ -6,14 +6,14 @@ export default function CallToAction() {
       <h2 className=" h1-style text-center text-color-secondary sm:w-[500px]  sm:items-start 2xl:w-[600px]">
         {"Train your app with Lobe"}
       </h2>
-      <button
+      <div
         onClick={() => {
           showOveralWarning();
         }}
-        className="h-[42px] w-[148px] rounded-[50px] bg-color-primary bg-opacity-100 text-[23px] font-extrabold leading-none text-color-quaternary transition-transform duration-500 ease-in-out hover:scale-105 hover:transform sm:h-[50px] sm:w-[168px] sm:text-[25px] 2xl:h-[64px] 2xl:w-[200px] 2xl:text-[30px]"
+        className="flex h-[42px] w-[148px] items-center justify-center rounded-[50px] bg-color-primary bg-opacity-100 text-[23px] font-extrabold leading-none text-color-quaternary transition-transform duration-500 ease-in-out hover:scale-105 hover:transform sm:h-[50px] sm:w-[168px] sm:text-[25px] 2xl:h-[64px] 2xl:w-[200px] 2xl:text-[30px] "
       >
         Download
-      </button>
+      </div>
     </div>
   );
 }

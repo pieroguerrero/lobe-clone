@@ -50,12 +50,12 @@ export default function DesktopHeader() {
           <MenuOption to={NavPaths.Blog.path} text={NavPaths.Blog.name} />
           <MenuOption to={NavPaths.Help.path} text={NavPaths.Help.name} />
         </nav>
-        <button
+        <div
           onClick={() => {
             showOveralWarning();
           }}
           className={
-            "h-12 w-[129px] rounded-3xl  text-[22px] font-bold" +
+            "flex h-12 w-[129px]  items-center justify-center rounded-3xl text-[22px] font-bold" +
             " " +
             (isButtonColorAccent || location.pathname !== NavPaths.Root.path
               ? " bg-color-primary text-color-quaternary"
@@ -63,7 +63,7 @@ export default function DesktopHeader() {
           }
         >
           Download
-        </button>
+        </div>
       </div>
     </header>
   );
