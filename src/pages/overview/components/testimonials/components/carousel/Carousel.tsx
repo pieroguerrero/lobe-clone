@@ -36,7 +36,6 @@ export default function Carousel({
     () => Children.toArray(children).length,
     [children]
   );
-
   return (
     <div
       className="slider"
