@@ -6,9 +6,6 @@
 ```
 📦src => Main source code container
  ┣ 📂assets => Media elements that are used in the page.
- ┃ ┣ 📂fonts
- ┃ ┣ 📂images
- ┃ ┗ 📂videos
  ┣ 📂components => Components that are used in multiple pages or layouts.
  ┣ 📂configs => Configuration for the different components of the application.
  ┣ 📂hooks =>Custom React Hooks to handle different functionalities or effects.
